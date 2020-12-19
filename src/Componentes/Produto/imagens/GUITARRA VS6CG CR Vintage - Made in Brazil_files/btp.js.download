@@ -1,0 +1,23 @@
+//Made In Brazil BR
+
+
+if( !!~window.location.href.indexOf("/ConfirmacaoPedido")){
+    window.cybOrderData = {
+        order_id: document.querySelector('.pedidoNumber .biggest').innerText,
+        value: document.querySelector('.fbits-responsive-carrinho-total-valor').innerText.replace(/[^0-9.]+/g,'')
+    }; 
+
+    window._vteq = window._vteq || [];
+    window._vteq.push({
+        confirmation: {
+            items: [],
+            orderId: cybOrderData.order_id,
+            total: cybOrderData.value
+        }
+    });
+}
+
+try{
+	var shopUrlCYB = 'madeinbrazil.com.br'
+	!function(){var t=function(t){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=t;var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)},e=Math.floor(5e4*Math.random());t("//d2rp1k1dldbai6.cloudfront.net/cybba_latest.min.js"),t("https://files1.cybba.solutions/"+shopUrlCYB+"/loader.min.js?v="+e),window._vteq=window._vteq||[],setTimeout(function(){window._vtsdk||t("https://storage.googleapis.com/cybcdn/"+shopUrlCYB+"/loader.js?v="+e)},1100),setTimeout(function(){"nestedVarDefined"in window&&!nestedVarDefined("_vtsdk.state.eventQueue")&&"_vtsdk"in window&&_vtsdk.init()},3e3)}();
+}catch(e){}

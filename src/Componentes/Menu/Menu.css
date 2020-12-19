@@ -1,0 +1,17 @@
+.navbar{
+    background-color: crimson;
+}
+
+.nav-item{
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item-active{
+    display: flex;
+    justify-content: center;
+}
+
+.active{
+    border-bottom: 2px solid white;
+}
